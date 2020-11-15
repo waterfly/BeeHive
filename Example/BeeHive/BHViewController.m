@@ -11,6 +11,8 @@
 #import "BeeHive.h"
 #import "BHService.h"
 
+#import "UIViewController+BHPageURLRouter.h"
+
 @BeeHiveService(HomeServiceProtocol,BHViewController)
 @interface BHViewController ()<HomeServiceProtocol>
 

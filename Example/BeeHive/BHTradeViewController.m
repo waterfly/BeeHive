@@ -8,7 +8,7 @@
 
 #import "BHTradeViewController.h"
 #import "BeeHive.h"
-
+#import "UIViewController+BHPageURLRouter.h"
 
 @implementation BHTradeViewController
 
@@ -47,11 +47,14 @@
 -(void)click:(UIButton *)btn
 {
     
-    id<TradeServiceProtocol> obj = [[BeeHive shareInstance] createService:@protocol(TradeServiceProtocol)];
-    if ([obj isKindOfClass:[UIViewController class]]) {
-        obj.itemId = @"12313231231";
-        [self.navigationController pushViewController:(UIViewController *)obj animated:YES];
-    }
+//    id<TradeServiceProtocol> obj = [[BeeHive shareInstance] createService:@protocol(TradeServiceProtocol)];
+//    if ([obj isKindOfClass:[UIViewController class]]) {
+//        obj.itemId = @"12313231231";
+//        [self.navigationController pushViewController:(UIViewController *)obj animated:YES];
+//    }
+    
+    NSURL *url = [NSURL URLWithString:@"scheme://member/login?key=1&key2=2"];
+    [self routeWithURL:url];
 }
 
 

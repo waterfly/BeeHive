@@ -13,13 +13,13 @@ Pod::Spec.new do |s|
 
   s.license      = "GPL"
 
-  s.platform = :ios, '8.0'
+  s.platform = :ios, '9.0'
 
   s.author       = { "soxeon" => "dpsopower@gmail.com" }
 
   s.source       = { :git => "https://github.com/alibaba/BeeHive.git", :tag => "#{s.version}" }
 
-  s.source_files = 'BeeHive/*.{h,m}'
+  s.source_files = 'BeeHive/**/*.{h,m}'
   s.resource = 'BeeHive/*.bundle'
   s.frameworks = 'QuartzCore','UIKit'
 
